@@ -13,6 +13,8 @@ import Layout from './Pages/hotelOwner/Layout';
 import Dashboard from './Pages/hotelOwner/Dashboard';
 import AddRoom from './Pages/hotelOwner/AddRoom';
 import ListRoom from './Pages/hotelOwner/ListRoom';
+import Verification from './Pages/hotelOwner/Verification';
+import VerificationFeedback from './Pages/VerificationFeedback';
 import {Toaster} from 'react-hot-toast'
 import { useAppContext } from './context/AppContext';
 const App = () => {
@@ -36,8 +38,9 @@ const App = () => {
                 <Route index element={<Dashboard/>}/>
                 <Route path="add-room" element={<AddRoom/>}/>
                 <Route path="list-room" element={<ListRoom/>}/>
-                
+                <Route path="verification" element={<Verification/>}/>
             </Route>
+            <Route path='/verification/:hotelId' element={<VerificationFeedback/>}/>
           </Routes>
       </div>
       <Footer/>
