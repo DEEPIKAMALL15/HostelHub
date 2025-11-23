@@ -5,7 +5,7 @@ import {useUser,useAuth} from "@clerk/clerk-react"
 import {toast} from 'react-hot-toast'
 
 const isDevelopment = import.meta.env.MODE === 'development';
-axios.defaults.baseURL = isDevelopment ? '/' : import.meta.env.VITE_BACKEND_URL;
+axios.defaults.baseURL = isDevelopment ? '/' : (import.meta.env.VITE_BACKEND_URL || 'https://hostel-hub-lake.vercel.app');
 
 const AppContext = createContext();
 
