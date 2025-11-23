@@ -14,7 +14,7 @@ connectdb();
 connectCloudinary();
 
 const app = express()
-const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173').split(',');
+const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173'||'https://hostel-hub-lake.vercel.app/').split(',');
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
